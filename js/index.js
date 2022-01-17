@@ -41,7 +41,7 @@
             })
     }
 
-    const btnMobileMenu = document.getElementById('sandwichMenu')
+    const btnMobileMenu = document.getElementById('sandwichBtn')
     const links = document.querySelectorAll('.navMenu')
 
     const arr = []

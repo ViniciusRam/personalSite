@@ -35,6 +35,8 @@ header {
     flex-direction: column;
     justify-content: center;
     align-content: center;
+
+    margin-right: 20px;
 }
 #changeLang p {
     position: absolute;
@@ -68,27 +70,45 @@ header {
 
 
 /* sandwichMenu */
+#sandwichBtn {
+    min-height: 25px;
+    min-width: 35px;
+    margin-right: 10px;
+    cursor: pointer;
+}
 #sandwichMenu{
     display: block;
     border-top: 2px solid black;
-    width: 25px;
-    margin-right: 10px;
+    width: 12.5px;
+    transition: .1s;
+}
+#sandwichMenu::before,#sandwichMenu::after {
+    content: ' ';
+    display: block;
+    position: absolute;
+
+    background-color: currentColor;
+    height: 2px;
+    min-width: 25px;
+    margin-top: 5px;
+
+    transition: .2s;
 }
 #sandwichMenu::before {
-    content: ' ';
-    display: block;
-
-    background-color: black;
-    height: 2px;
-    width: 25px;
-    margin-top: 4px;
+    transform: translateY(-14px);
 }
 #sandwichMenu::after {
-    content: ' ';
-    display: block;
+    transform: translateY(0px);
+}
 
-    background-color: black;
-    height: 2px;
+#navMenu.active #sandwichMenu {
+    width: 0;
+}
+#navMenu.active #sandwichMenu::after{
     width: 25px;
-    margin-top: 4px;
+    transform: translate3d(-4px, -8px, 0) rotate(-45deg);
+}
+#navMenu.active #sandwichMenu::before{
+    transform: translate3d(-4px, -8px, 0) rotate(45deg);
+    width: 25px;
 }
