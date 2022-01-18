@@ -1,6 +1,9 @@
 html {
     min-width: 279px;
 }
+strong, b {
+    color: #2d4a8a;
+}
 .btn {
     border: none;
     background: none;
@@ -11,8 +14,8 @@ a {
 
 /* header container */
 header {
-
-    position: fixed;
+    position: sticky;
+    top: 0;
 
     display: flex;
     justify-content: space-between;
@@ -21,6 +24,8 @@ header {
     width: 100vw;
     height: 100px;
     min-width: 279px;
+
+    background-color: white;
 }
 #imgLogo {
     height: 60px;
@@ -62,8 +67,8 @@ header {
     width: 40px;
 }
 .langBtn img {
-    height: 40px;
-    width: 40px;
+    height: 30px;
+    width: 30px;
 }
 
 /* navHeader */
@@ -114,4 +119,53 @@ header {
 #navMenu.active #sandwichMenu::before{
     transform: translate3d(-4px, -8px, 0) rotate(45deg);
     width: 25px;
+}
+
+
+/* welcome */
+#welcome {
+    overflow: hidden;
+    max-width: 80vw;
+    margin: auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.personalPresentation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.imgWelc {
+    height: 360px;
+    margin-left: 15px;
+}
+.arrowDown {
+    display: flex;
+    flex-direction: column;
+}
+.arrowDown img:nth-child(2) {
+    margin-top: -32px;
+    margin-bottom: 200px;
+}
+.arrowDown img {
+    height: 50px;
+    width: 50px;
+    /* filter:brightness(0); */
+    animation: moveArrow linear infinite 1s;
+    transition: transform 2s;
+}
+
+@keyframes moveArrow {
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+    50% {
+        transform: translate3d(0, -10px, 0);
+    }
+    100% {
+        transform: translate3d(0, 0, 0);
+    }
 }
