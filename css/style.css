@@ -138,6 +138,20 @@ header {
     flex-direction: column;
     align-items: center;
 }
+.hello{
+    display: flex;
+    align-items: center;
+}
+#hand {
+    font-size: 27px;
+    
+    position: relative;
+    left: 8px;
+
+    transition: transform;
+    animation: handWave 2s infinite;
+    transform-origin: 70% 70%;
+}
 .imgWelc {
     height: 360px;
     margin-left: 15px;
@@ -154,8 +168,8 @@ header {
     height: 50px;
     width: 50px;
     /* filter:brightness(0); */
-    animation: moveArrow linear infinite 1s;
-    transition: transform 2s;
+    animation: moveArrow linear infinite 2s;
+    transition: transform;
 }
 
 @keyframes moveArrow {
@@ -168,4 +182,32 @@ header {
     100% {
         transform: translate3d(0, 0, 0);
     }
+}
+@keyframes handWave {
+        0% {
+          transform: rotate(0deg);
+        }
+        10% {
+          transform: rotate(14deg);
+        }
+        20% {
+          transform: rotate(-8deg);
+        }
+        30% {
+          transform: rotate(14deg);
+        }
+        40% {
+          transform: rotate(-4deg);
+        }
+        50% {
+          transform: rotate(10deg);
+        }
+        60% {
+          transform: rotate(0deg);
+        } 
+        100% {
+          transform: rotate(0deg);
+        }
+
+
 }
