@@ -134,7 +134,7 @@ header {
     width: 100vw;
 
     position: absolute;
-    top: 64px;
+    top: 63px;
     right: 0;
 
     background-color: transparent;
@@ -218,6 +218,44 @@ header {
     /* filter:brightness(0); */
     animation: moveArrow linear infinite 2s;
     transition: transform;
+}
+
+#aboutMeContainer {
+    margin: 100px auto;
+    max-width: 80vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+.about {
+    text-align: center;
+}
+.aboutTitle {
+    font-size: 32px;
+}
+.about p {
+    font-size: 22px;
+}
+.skillsContainer {
+    text-align: center;
+}
+.skillInfo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 100vw;
+}
+.imgSkill {
+    width: 70px;
+    height: auto;
+}
+.barSep {
+    background-color: rgba(0, 0, 0, 0.295);
+    height: 1px;
+    width: 15px;
 }
 
 @keyframes moveArrow {
