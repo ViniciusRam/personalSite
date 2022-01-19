@@ -145,12 +145,14 @@ header {
     height: 30vh;
     border-radius: 0 0 5% 5%;
 }
-#navMenu.active #navLinks a {
+#navLinks a {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100%;
     width: 100%;
+
+    opacity: 0;
 }
 #navLinks li {
     list-style: none;
@@ -255,4 +257,28 @@ header {
         }
 
 
+}
+@keyframes menuLinksFade {
+    0% {
+        transform: translate3d(0, -15px, -5px);
+        opacity: 0;
+    }
+    100% {
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+    }
+}
+@keyframes menuLinksFadeRev {
+    0% {
+        opacity: 1;
+    }
+    15% {
+        opacity: 0.4;
+    }
+    40% {
+        opacity: 0.2;
+    }
+    100% {
+        opacity: 0;
+    }
 }
