@@ -23,10 +23,12 @@ header {
 
     max-width: 100%;
     width: 100vw;
-    height: 100px;
+    height: 80px;
     min-width: 279px;
 
     background-color: white;
+
+    z-index: 100;
 }
 #imgLogo {
     height: 60px;
@@ -34,6 +36,7 @@ header {
 
     position: relative;
     left: 10px;
+    border-radius: 50%;
 }
 
 /* changeLang container */
@@ -49,7 +52,7 @@ header {
 }
 #changeLang p {
     position: absolute;
-    bottom: 15px;
+    bottom: 8px;
     left: 5%;
 }
 .btnsLangConteiner {
@@ -131,7 +134,7 @@ header {
     width: 100vw;
 
     position: absolute;
-    top: 70px;
+    top: 64px;
     right: 0;
 
     background-color: transparent;
@@ -143,7 +146,6 @@ header {
     visibility: visible;
     opacity: 1;
     height: 30vh;
-    border-radius: 0 0 5% 5%;
 }
 #navLinks a {
     display: flex;
@@ -208,12 +210,11 @@ header {
     flex-direction: column;
 }
 .arrowDown img:nth-child(2) {
-    margin-top: -32px;
-    margin-bottom: 200px;
+    margin-top: -29px;
 }
 .arrowDown img {
-    height: 50px;
-    width: 50px;
+    height: 40px;
+    width: 40px;
     /* filter:brightness(0); */
     animation: moveArrow linear infinite 2s;
     transition: transform;
