@@ -21,6 +21,7 @@ header {
     justify-content: space-between;
     align-items: center;
 
+    max-width: 100%;
     width: 100vw;
     height: 100px;
     min-width: 279px;
@@ -71,11 +72,6 @@ header {
     width: 30px;
 }
 
-/* navHeader */
-#navMenu a{
-    display: none;
-}
-
 
 /* sandwichMenu */
 #sandwichBtn {
@@ -121,6 +117,53 @@ header {
     width: 25px;
 }
 
+#navLinks {
+    visibility: hidden;
+    overflow: hidden;
+    opacity: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    
+    height: 0;
+    width: 100vw;
+
+    position: absolute;
+    top: 70px;
+    right: 0;
+
+    background-color: transparent;
+
+    transition: .3s;
+}
+#navMenu.active #navLinks {
+    background-color: white;
+    visibility: visible;
+    opacity: 1;
+    height: 30vh;
+    border-radius: 0 0 5% 5%;
+}
+#navMenu.active #navLinks a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+#navLinks li {
+    list-style: none;
+    color: black;
+    text-transform: uppercase;
+}
+
+
+
+
+
+
+
 
 /* welcome */
 #welcome {
@@ -144,13 +187,15 @@ header {
 }
 #hand {
     font-size: 27px;
-    
+
     position: relative;
     left: 8px;
 
     transition: transform;
     animation: handWave 2s infinite;
     transform-origin: 70% 70%;
+
+    z-index: -1;
 }
 .imgWelc {
     height: 360px;

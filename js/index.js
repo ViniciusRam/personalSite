@@ -11,15 +11,11 @@
         const navContainer = document.getElementById('navMenu');
         const _class = navContainer.classList
 
-        const bodyContainer = document.getElementById('body');
-        const _body = bodyContainer.classList
 
         if(( arr.length % 2) !== 0 ){
             _class.add('active')
-            _body.add('active')
         } else {
             _class.remove('active')
-            _body.remove('active')
         }
         const active = navContainer.classList.contains('active')
         event.currentTarget.setAttribute('aria-expanded', active)
@@ -27,12 +23,6 @@
         active ? event.currentTarget.setAttribute('aria-label', 'fechar menu') : event.currentTarget.setAttribute('aria-label', 'abrir menu')
         
         animateLinks()
-
-        if(_body.contains('active')){
-            bodyContainer.style.overflow = 'hidden'
-        } else {
-            bodyContainer.style.overflow = 'visible'
-        }
     }
 
     function animateLinks(){    
