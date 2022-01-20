@@ -5,14 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pagina Inicial</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+    </style>
     <link rel="stylesheet" href="../css/normalize.css">
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body id="body">
-    <header>
+    <header id="header">
         <a href=""><img src="../images/logoSv1.svg" alt="uma logo / uma letra V em preto" id="imgLogo"></a>
         <div id="changeLang">
-            <p>Selecione seu idioma</p>
+            <p>Seu idioma</p>
             <div class="btnsLangConteiner">
                 <button class="ptBtn langBtn btn"><img src="../images/brLogo.png" alt="botao que muda o idioma da pagina para portugues do brasil" role="button"></button>
                 <button class="enBtn langBtn btn"><img src="../images/enLogo.png" alt="button that changes the page language to United States English" role="button"></button>
@@ -24,34 +27,39 @@
                 <span id="sandwichMenu"></span>
             </button>
             <ul id="navLinks" class="navLinks">
-                <a href="index.html"><li>Pagina Inicial</li></a>
+                <a href="#welcome"><li>Inicio</li></a>
                 <a href="#aboutMeContainer"><li>Sobre Mim</li></a>
                 <a href="./html/projetos.html"><li>Projetos</li></a>
             </ul>
         </nav>
     </header>
-    <section id="welcome">
-        <div class="personalPresentation">
-            <div class="hello">
-                <h1><b>Olá!</b></h1> <span id="hand">👋🏻</span>
+    <main>
+
+        <section id="welcome">
+            <div class="personalPresentation">
+                <div class="hello">
+                    <h1><b>Olá!</b></h1> <span id="hand">👋🏻</span>
+                </div>
+                <p>Meu nome é <strong>Vinicius</strong>, seja bem vindo!</p>
             </div>
-            <p>Meu nome é <strong>Vinicius</strong>, seja bem vindo!</p>
-        </div>
-        <img src="../images/imgHm.svg" alt="imagem de um homem sentado mexendo em um laptop" class="imgWelc">
-        <div class="arrowDown">
-            <img src="../images/arrow.png" alt="">
-            <img src="../images/arrow.png" alt="">
-        </div>
-    </section>
-    <section id="aboutMeContainer">
-        <div class="about">
-            <h2 class="aboutTitle">Isso é um pouquinho de mim</h2>
-            <p>Eu descobri e me apaixonei pela programação em 2021, e desde então venho trabalhando todos os dias para me tornar um profissioanl melhor</p>
-            <p>Atualmente eu tenho meus estudos voltados para tecnologias web, como o JavaScript, HTML e CSS</p>
-            <p>Minha meta atual é conseguir adentrar em outras tecnologias variadas tanto na WEB, quanto em outras areas</p>
-        </div>
-        <div class="skillsContainer">
-            <h2 class="skillsTitle"> Skills</h2>
+            <img src="../images/imgHm.svg" alt="imagem de um homem sentado mexendo em um laptop" class="imgWelc">
+            <div class="arrowDown">
+                <img src="../images/arrow.png" alt="">
+                <img src="../images/arrow.png" alt="">
+            </div>
+        </section>
+
+        <section id="aboutMeContainer" class="marginTop">
+            <div class="about">
+                <h1 class="aboutTitle">Isso é um pouquinho de mim</h1>
+                <p>Eu descobri e me apaixonei pela programação em 2021, e desde então venho trabalhando todos os dias para me tornar o melhor possivel dentro da area</p>
+                <p>Atualmente eu tenho meus estudos voltados para tecnologias web, como o JavaScript, HTML e CSS</p>
+                <p>Minha meta atual é conseguir adentrar em outras tecnologias variadas tanto na WEB, quanto em outras plataformas</p>
+            </div>
+        </section>
+        
+        <section class="skillsContainer" class="marginTop">
+            <h1 class="skillsTitle"> Skills</h1>
             <div class="skillInfo">
 
                     <img class="imgSkill" src="../images/htmlSkill2.svg" alt="" srcset="">
@@ -60,11 +68,23 @@
                     <span class="barSep"></span>
                     <img class="imgSkill" src="../images/cssSkill.svg" alt="" srcset="">
 
+            </div>
+        </section>
+
+        <section id="projects" class="marginTop">
+            <h1>Projetos</h1>
+            <div class="projectBox">
 
             </div>
-        </div>
+            <div class="projectBox">
+                
+            </div>
+        </section>
 
-    </section>
+        <section class="marginTop">
+            <a href="mailto:viniciuseduardorr@gmail.com">Entre em contato</a>
+        </section>
+    </main>
     <footer>
         <a href="referencias.html" target="_blank"></a>
     </footer>
