@@ -241,7 +241,8 @@ a {
 
 main {
     margin:auto;
-    max-width: 80vw;
+    max-width: 100%;
+    width: 80vw;
 
     display: flex;
     flex-direction: column;
@@ -318,6 +319,40 @@ main {
 }
 .imgSocial {
     width: 55px;
+    height: auto;
+}
+
+
+    /* ---- */
+   /* Footer */
+    /* ---- */
+#footer {
+
+    margin-top: 75px;
+    padding: 15px;
+
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #2d4a8a29;
+}
+#footer p {
+    margin: 5px;
+}
+#footer p:nth-child(2) {
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+
+.linksFooter {
+    display: flex;
+    gap: 3px;
+}
+.imgSocialFoo {
+    width: 18px;
     height: auto;
 }
 
