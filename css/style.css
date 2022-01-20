@@ -288,6 +288,7 @@ main {
   /* ---- */
 /* Projetos */
   /* ---- */
+
 .projectBox {
     height: 400px;
     width: 300px;
@@ -299,7 +300,26 @@ main {
 }
 
 
+    /* ---- */
+   /* Social */
+    /* ---- */
 
+.mailButton {
+    display: flex;
+    height: 50px;
+    width: 150px;
+
+    margin: 25px auto;
+
+    border-radius: 10px;
+
+    background-color: #2d4a8a;
+    color: aliceblue;
+}
+.imgSocial {
+    width: 55px;
+    height: auto;
+}
 
 
 
