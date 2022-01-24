@@ -233,8 +233,6 @@ a {
 .arrowDown img {
     height: 40px;
     width: 40px;
-    animation: moveArrow linear infinite 2s;
-    transition: transform;
 }
 
 
@@ -364,17 +362,6 @@ main {
 
 
 
-@keyframes moveArrow {
-    0% {
-        transform: translate3d(0, 0, 0);
-    }
-    50% {
-        transform: translate3d(0, -10px, 0);
-    }
-    100% {
-        transform: translate3d(0, 0, 0);
-    }
-}
 @keyframes handWave {
         0% {
           transform: rotate(0deg);
