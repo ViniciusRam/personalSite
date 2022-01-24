@@ -1,9 +1,16 @@
+:root {
+    --standartColor: #2d4a8a;
+    --standartColorSoft: #2d4a8a27;
+    --highBriColor: white;
+    --lowBriColor: black;
+    --divShaColor: rgba(0, 0, 0, 0.445);
+}
 html {
     min-width: 279px;
     font-family: 'montserrat', sans-serif;
 }
 strong, b {
-    color: #2d4a8a;
+    color: var(--standartColor);
     font-weight: bolder;
 }
 h1 {
@@ -15,7 +22,7 @@ h1 {
 }
 a {
     text-decoration: none;
-    color: black;
+    color: var(--lowBriColor);
 }
 main {
     margin:auto;
@@ -59,7 +66,7 @@ body {
     height: 80px;
     min-width: 279px;
 
-    background-color: white;
+    background-color: var(--highBriColor);
 
     z-index: 100;
 
@@ -128,7 +135,7 @@ body {
 }
 #sandwichMenu{
     display: block;
-    border-top: 2px solid black;
+    border-top: 2px solid var(--lowBriColor);
     width: 12.5px;
     transition: .1s;
 }
@@ -185,7 +192,7 @@ body {
     transition: .3s;
 }
 #navMenu.active #navLinks {
-    background-color: white;
+    background-color: var(--highBriColor);
     visibility: visible;
     opacity: 1;
     height: 30vh;
@@ -201,7 +208,7 @@ body {
 }
 #navLinks li {
     list-style: none;
-    color: black;
+    color: var(--lowBriColor);
     text-transform: uppercase;
 }
 
@@ -293,7 +300,8 @@ body {
     height: auto;
 }
 .barSep {
-    background-color: rgba(0, 0, 0, 0.295);
+    background-color: var(--divShaColor);
+    opacity: 0.4;
     height: 1px;
     width: 15px;
 }
@@ -307,7 +315,7 @@ body {
     width: 300px;
     border-radius: 15px;
 
-    box-shadow: 1px 1px 15px 1px rgba(0, 0, 0, 0.445);
+    box-shadow: 1px 1px 15px 1px var(--divShaColor);
 
     margin-bottom: 25px;
 }
@@ -316,19 +324,6 @@ body {
     /* ---- */
    /* Social */
     /* ---- */
-
-.mailButton {
-    display: flex;
-    height: 50px;
-    width: 150px;
-
-    margin: 25px auto;
-
-    border-radius: 10px;
-
-    background-color: #2d4a8a;
-    color: aliceblue;
-}
 .imgSocial {
     width: 55px;
     height: auto;
@@ -351,7 +346,7 @@ body {
     justify-content: center;
     align-items: center;
 
-    background-color: #2d4a8a29;
+    background-color: var(--standartColorSoft);
 }
 #footer p {
     margin: 5px;
