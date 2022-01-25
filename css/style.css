@@ -231,7 +231,7 @@ body {
     height: 100%;
     width: 100%;
     position: relative;
-    left: 15px;
+    left: 8px;
 
     opacity: 0;
 }
@@ -267,7 +267,7 @@ body {
     font-weight: bolder;
 
     position: relative;
-    left: 20px;
+    left: 23px;
 }
 #hand {
     font-size: 27px;
