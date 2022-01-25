@@ -83,45 +83,72 @@ body {
 
 
       /* ---- */
-/* changeLang container */
+/* change theme */
       /* ---- */
 
 
-#changeLang {
-    position: relative;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
+    #iTheme {
+    display: none;
+    }
+    #iTheme + .lTheme{
+        display: flex;
+        align-items: center;
 
-    margin-right: 20px;
-}
-#changeLang p {
-    position: absolute;
-    bottom: 10px;
-    left: 20%;
-    font-size: 15px;
-}
-.btnsLangConteiner {
-    display: flex;
-    flex-direction: row;
+        height: 20px;
+        width: 50px;
+        
+        border: 2px solid skyblue;
+        border-radius: 10px;
+        
+        
+        cursor: pointer;   
+        
+        position: relative;
 
-}
-.langBtn {
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content:center;
+        background-color: skyblue;
+        background-image: url(../images/cloud.png);
+        background-size: contain;
+        background-position: center;
 
-    margin: 5px;
-    height: 0px;
-    width: 40px;
-}
-.langBtn img {
-    height: 30px;
-    width: 30px;
-}
+        transition: all .2s;
+    }
+    #iTheme + .lTheme::before {
+        content: '';
+        display: inline-block;
+
+        height: 28px;
+        width: 28px;
+
+        border-radius: 50%;
+
+        background-image: url(../images/sun.png);
+        background-size: contain;
+        background-position: center;
+
+        position: absolute;
+        left: -5px;
+
+        transition: .15s;
+
+
+    }
+
+    #iTheme:checked + .lTheme::before {
+        left: 30px;
+        height: 26px;
+        width: 26px;
+        background-image: url(../images/moon.png);
+    }
+    #iTheme:checked + .lTheme {
+        border: 2px solid slateblue;
+        background-color: slateblue;
+
+        background-image: url(../images/star.png);
+        background-size:35px;
+        background-position: left;
+        background-repeat: no-repeat;
+    }
 
         /* ---- */
     /* sandwichMenu */
@@ -203,6 +230,8 @@ body {
     justify-content: center;
     height: 100%;
     width: 100%;
+    position: relative;
+    left: 15px;
 
     opacity: 0;
 }
@@ -236,6 +265,9 @@ body {
     display: flex;
     align-items: center;
     font-weight: bolder;
+
+    position: relative;
+    left: 20px;
 }
 #hand {
     font-size: 27px;
