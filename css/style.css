@@ -8,6 +8,8 @@
 html {
     min-width: 279px;
     font-family: 'montserrat', sans-serif;
+    -webkit-tap-highlight-color: rgba(0, 29, 255, 0.2);
+
 }
 strong, b {
     color: var(--standartColor);
