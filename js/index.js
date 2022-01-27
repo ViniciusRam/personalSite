@@ -44,7 +44,22 @@
 (function darkTheme(){
     const html = document.querySelector('html');
     const check = document.querySelector('input[name="iTheme"]');
+    
+    check.addEventListener('change', () => {html.classList.toggle('darkTheme')});
 
-    check.addEventListener('change', () => {html.classList.toggle('darkTheme')})
+    const addMods = (event) => {
+        if (event.type === 'touchstart') {event.preventDefault()};
+        if( !(html.classList.contains('darkTheme'))){
+            document.getElementById('imgLogo').src = 'images/logoDark.svg'
+        } else {
+            document.getElementById('imgLogo').src = 'images/logoLight.svg'
+        }
+    }
+    check.addEventListener('click', addMods)
+    check.addEventListener('touch', addMods)
+
+
+
+
 
 })();

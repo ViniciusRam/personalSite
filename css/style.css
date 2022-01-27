@@ -4,6 +4,7 @@
     --highBriColor: white;
     --lowBriColor: black;
     --divShaColor: rgba(0, 0, 0, 0.445);
+    --brightness: 0;
 }
 .darkTheme:root {
     --standartColor: #a1bdfa;
@@ -11,8 +12,14 @@
     --highBriColor: rgb(22, 22, 34);
     --lowBriColor: white;
     --divShaColor: rgba(158, 158, 158, 0.445);
+    --brightness: 100;
+
 }
-p, h1 {
+p{
+    color: var(--lowBriColor);
+}
+h1 {
+    font-size: 32px;
     color: var(--lowBriColor);
 }
 html {
@@ -24,9 +31,6 @@ html {
 strong, b {
     color: var(--standartColor);
     font-weight: bolder;
-}
-h1 {
-    font-size: 32px;
 }
 .btn {
     border: none;
@@ -87,12 +91,12 @@ body {
     grid-area: h;
 }
 #imgLogo {
-    height: 60px;
-    width: 60px;
+    height: 32px;
+    width: 32px;
 
     position: relative;
-    left: 10px;
-    border-radius: 50%;
+    left: 12px;
+
 }
 
 
@@ -126,6 +130,9 @@ body {
         background-position: center;
 
         transition: all .2s;
+
+        position: relative;
+        left: 12px;
     }
     #iTheme + .lTheme::before {
         content: '';
@@ -304,6 +311,7 @@ body {
     display: flex;
     flex-direction: column;
     margin: 55px 0 ;
+    filter: brightness(var(--brightness));
 }
 .arrowDown img:nth-child(2) {
     margin-top: -29px;
