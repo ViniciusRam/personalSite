@@ -40,3 +40,11 @@
         animateLinks(_class);
     }
 })();
+
+(function darkTheme(){
+    const html = document.querySelector('html');
+    const check = document.querySelector('input[name="iTheme"]');
+
+    check.addEventListener('change', () => {html.classList.toggle('darkTheme')})
+
+})();
