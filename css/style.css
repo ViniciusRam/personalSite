@@ -1,14 +1,14 @@
 :root {
     --standartColor: #2d4a8a;
-    --standartColorSoft: #2d4a8a27;
+    --standartColorSoft: #d0cab06d;
     --highBriColor: white;
     --lowBriColor: black;
     --divShaColor: rgba(0, 0, 0, 0.445);
-    --brightness: 0;
+    --brightness: 1;
 }
 .darkTheme:root {
     --standartColor: #a1bdfa;
-    --standartColorSoft: #4707f859;
+    --standartColorSoft: rgba(255, 255, 255, 0.042);
     --highBriColor: rgb(22, 22, 34);
     --lowBriColor: white;
     --divShaColor: rgba(158, 158, 158, 0.445);

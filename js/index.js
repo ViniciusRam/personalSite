@@ -51,8 +51,10 @@
         if (event.type === 'touchstart') {event.preventDefault()};
         if( !(html.classList.contains('darkTheme'))){
             document.getElementById('imgLogo').src = 'images/logoDark.svg'
+            document.getElementById('imgWelc').src = 'images/darkFimg.svg'
         } else {
             document.getElementById('imgLogo').src = 'images/logoLight.svg'
+            document.getElementById('imgWelc').src = 'images/lightFImg.svg'
         }
     }
     check.addEventListener('click', addMods)
