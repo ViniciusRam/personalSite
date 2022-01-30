@@ -156,6 +156,6 @@ const btnMobileMenu = document.getElementById('sandwichBtn');
     if(content.length) {
         window.addEventListener('scroll', debounce(function() {
           animateOnScroll();
-        }, 100)); 
+        }, 50)); 
     }
 })();
