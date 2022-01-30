@@ -118,3 +118,44 @@ const btnMobileMenu = document.getElementById('sandwichBtn');
       };
 
 })();
+
+
+(function animatioContentPage(){
+    const debounce = function(func, wait, immediate) {
+        let timeout;
+        return function(...args) {
+          const context = this;
+          const later = function () {
+            timeout = null;
+            if (!immediate) func.apply(context, args);
+          };
+          const callNow = immediate && !timeout;
+          clearTimeout(timeout);
+          timeout = setTimeout(later, wait);
+          if (callNow) func.apply(context, args);
+        };
+      };
+
+    const animationClass = "animation"
+    let content = document.querySelectorAll("[data-animate]");
+    
+    function animateOnScroll(){
+        const windowDistance = window.pageYOffset + (window.innerHeight * 0.75);
+        content.forEach(function(element){
+            if((windowDistance) > element.offsetTop){
+                element.classList.add(animationClass)
+            } else {
+                element.classList.remove(animationClass)
+            }
+
+        })
+
+    }
+    animateOnScroll()
+    
+    if(content.length) {
+        window.addEventListener('scroll', debounce(function() {
+          animateOnScroll();
+        }, 100)); 
+    }
+})();
