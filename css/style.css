@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 :root {
     --standartColor: #2d4a8a;
     --standartColorSoft: #d0cab06d;
@@ -120,7 +121,6 @@ body {
         
         cursor: pointer;   
         
-        position: relative;
 
         background-color: skyblue;
         background-image: url(../images/cloud.png);
@@ -130,7 +130,7 @@ body {
         transition: all .2s;
 
         position: relative;
-        left: 12px;
+        left: 8px;
     }
     #iTheme + .lTheme::before {
         content: '';
@@ -286,7 +286,7 @@ body {
     font-weight: bolder;
 
     position: relative;
-    left: 23px;
+    left: 19px;
 }
 #hand {
     font-size: 27px;
@@ -490,5 +490,52 @@ body {
     }
     .projectBox {
         width: 200px;
+    }
+}
+@media screen and (min-width: 1024px){
+    #navLinks {
+        visibility: visible;
+        overflow: visible;
+        opacity: 1;
+
+        width: initial;
+
+        top: 20px;
+        right: 15px;
+
+        background-color: var(--highBriColor);
+
+        transition: 0s;
+
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 30px;
+
+        padding-left: 0px;
+    }
+    #navMenu.active #navLinks {
+        height: 0;
+    }
+    #navLinks a {
+        opacity: 1 !important;
+        animation: none !important;
+        position: static;
+
+        transition: 0s;
+
+    }
+    #sandwichBtn {
+        display: none;
+        opacity: 0;
+        visibility: hidden;
+        overflow: hidden;
+        height: 0;
+        width: 0;
+    }
+    #iTheme + .lTheme {
+        left: -18px;
+    }
+    .hello {
+        left: 12px;
     }
 }

@@ -1,4 +1,5 @@
 const btnMobileMenu = document.getElementById('sandwichBtn');
+
 (function sandwichMenu(){
     
     const links = document.querySelectorAll('.navLinks a');
@@ -7,13 +8,15 @@ const btnMobileMenu = document.getElementById('sandwichBtn');
     btnMobileMenu.addEventListener('touchstart', toggleMenu);
 
     function animateLinks(_class){    
-            links.forEach((link, index) => {
-                if (_class.contains('active')){
-                    link.style.animation = `menuLinksFade .3s ease forwards ${index / 7 + 0.001}s`;
-                } else {
-                    link.style.animation = `menuLinksFadeRev .3s ease forwards`;
-                }
-            })
+
+                links.forEach((link, index) => {
+                    if (_class.contains('active')){
+                        link.style.animation = `menuLinksFade .3s ease forwards ${index / 7 + 0.001}s`;
+                    } else {
+                        link.style.animation = `menuLinksFadeRev .3s ease forwards`;
+                    }
+                })
+
     }
 
     function toggleMenu(event) {
@@ -159,3 +162,13 @@ const btnMobileMenu = document.getElementById('sandwichBtn');
         }, 50)); 
     }
 })();
+
+
+window.addEventListener('resize', function () {
+    let widthScreen = window.innerWidth;
+
+    if (widthScreen >= 1024) {
+        document.getElementById('navMenu').className = '';
+        
+    }
+});
