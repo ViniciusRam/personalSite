@@ -538,4 +538,9 @@ body {
     .hello {
         left: 12px;
     }
+    #projectBoxContainer {
+        margin-top: 100px;
+        display: flex;
+        gap: 100px;
+    }
 }
