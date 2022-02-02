@@ -143,7 +143,13 @@ const btnMobileMenu = document.getElementById('sandwichBtn');
     let content = document.querySelectorAll("[data-animate]");
     
     function animateOnScroll(){
-        const windowDistance = window.pageYOffset + (window.innerHeight * 0.75);
+        const heightScreen = window.innerHeight
+        let windowDistance = window.pageYOffset + (window.innerHeight * 0.80);
+        console.log(heightScreen)
+        if (heightScreen >= 1600) {
+            windowDistance = window.pageYOffset + (window.innerHeight * 0.86);
+        }
+
         content.forEach(function(element){
             if((windowDistance) > element.offsetTop){
                 element.classList.add(animationClass)
