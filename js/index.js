@@ -145,7 +145,7 @@ const btnMobileMenu = document.getElementById('sandwichBtn');
     function animateOnScroll(){
         const heightScreen = window.innerHeight
         let windowDistance = window.pageYOffset + (window.innerHeight * 0.80);
-        console.log(heightScreen)
+
         if (heightScreen >= 1600) {
             windowDistance = window.pageYOffset + (window.innerHeight * 0.86);
         }

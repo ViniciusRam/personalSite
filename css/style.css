@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 :root {
     --standartColor: #2d4a8a;
-    --standartColorSoft: #d0cab06d;
+    --standartColorSoft: #f0f0f077;
     --highBriColor: white;
     --lowBriColor: black;
     --divShaColor: rgba(0, 0, 0, 0.445);
@@ -536,11 +536,23 @@ body {
         left: -18px;
     }
     .hello {
-        left: 12px;
+        left: 0;
     }
     #projectBoxContainer {
         margin-top: 100px;
         display: flex;
         gap: 100px;
+    }
+
+    .sideBySide {
+        display: flex;
+        gap: 350px;
+    }
+    .personalPresentation {
+        align-items: flex-start;
+        justify-content: center;
+    }
+    .personalPresentation p {
+        font-size: 18px;
     }
 }
