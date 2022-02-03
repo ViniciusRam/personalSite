@@ -16,6 +16,7 @@
     --brightness: 100;
 
 }
+
 p{
     color: var(--lowBriColor);
 }
@@ -423,8 +424,25 @@ body {
     transform: translate3d(0, 0, 0);
 }
 
+        /* ---- */
+    /* scroll theme */
+        /* ---- */
 
+::-webkit-scrollbar {
+    height: 10px;
+    width: 8px;
+    border-radius: 5px;
+}
+::-webkit-scrollbar-thumb {
+    background:  var(--standartColor);
 
+}
+::-webkit-scrollbar-track-piece {
+    border-radius: 6px;
+}
+::-webkit-scrollbar-thumb:vertical {
+    border-radius: 6px;
+}
 
 
 
